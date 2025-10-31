@@ -11,3 +11,14 @@ console.log(typeof(b));
 //     number
 //     123
 //     string
+
+//Special case 
+
+let num="Vikky"/2;
+console.log(typeof(num));
+console.log(num)
+
+// output --->
+//     string
+//     number
+//     NaN

@@ -1,11 +1,11 @@
 
 
 
-let a;  // declaration
+let av;  // declaration
 
-a=100;  // Initialization 
+av=100;  // Initialization 
 
-console.log(a);   // 100 
+console.log(av);   // 100 
 
 
 
@@ -49,13 +49,13 @@ console.log(c2);     //  Output ----> Reference Error
 
 
 
-What is Hoisting?
+// What is Hoisting?
 
-Hoisting means JavaScript moves declarations to the top of their scope (before the code executes) — so you can use functions or variables before you actually declare them in your code.
+// Hoisting means JavaScript moves declarations to the top of their scope (before the code executes) — so you can use functions or variables before you actually declare them in your code.
 
-In short:
+// In short:
 
-        “Declarations are hoisted, not initializations.”
+//         “Declarations are hoisted, not initializations.”
 
 
 console.log(a); // Output: undefined
@@ -64,72 +64,72 @@ console.log(a); // Output: 5
 
 
 //Hoisting 
-var a;
-console.log(a); // undefined (a is declared but not assigned yet)
-a = 5;
-console.log(a); // 5
+var a1;
+console.log(a1); // undefined (a is declared but not assigned yet)
+a1 = 5;
+console.log(a1); // 5
 
 
 
-Example 2: let and const are also hoisted — but differently!
-console.log(x); // ❌ ReferenceError
-let x = 10;
+// Example 2: let and const are also hoisted — but differently!
+// console.log(x); // ❌ ReferenceError
+// let x = 10;
 
 
-🧠 Why error?
-Because let and const are hoisted but kept in a "temporal dead zone" (TDZ) until the line where they are declared.
-You can’t access them before that point.
+// 🧠 Why error?
+// Because let and const are hoisted but kept in a "temporal dead zone" (TDZ) until the line where they are declared.
+// You can’t access them before that point.
 
-So:
+// So:
 
-var → hoisted and initialized as undefined
+// var → hoisted and initialized as undefined
 
-let and const → hoisted but not initialized (accessing before declaration gives an error)
-
-
-Function Hoisting:
-Example 3: Function Declaration
-sayHello(); // ✅ Works fine
-
-function sayHello() {
-  console.log("Hello!");
-}
+// let and const → hoisted but not initialized (accessing before declaration gives an error)
 
 
-✅ Works! Because function declarations are completely hoisted — the entire function definition moves to the top.
+// Function Hoisting:
+// Example 3: Function Declaration
+// sayHello(); // ✅ Works fine
 
-Example 4: Function Expression
-sayHi(); // ❌ TypeError
-
-var sayHi = function() {
-  console.log("Hi!");
-};
+// function sayHello() {
+//   console.log("Hello!");
+// }
 
 
-🧠 Why?
-Because only the variable sayHi is hoisted (as undefined), not the function itself.
-So when you call it, it’s like doing:
+// ✅ Works! Because function declarations are completely hoisted — the entire function definition moves to the top.
 
-var sayHi;
-sayHi(); // sayHi is undefined ⇒ TypeError
+// Example 4: Function Expression
+// sayHi(); // ❌ TypeError
 
-🪄 Summary Table
-Type	Hoisted?	Initialized?	Can be used before declaration?
-var	✅ Yes	✅ As undefined	⚠️ Yes, but gives undefined
-let	✅ Yes	❌ No	❌ ReferenceError
-const	✅ Yes	❌ No	❌ ReferenceError
-Function Declaration	✅ Yes	✅ Full definition	✅ Yes
-Function Expression	✅ Yes (variable only)	✅ As undefined	❌ TypeError
-🧩 Visual Analogy
+// var sayHi = function() {
+//   console.log("Hi!");
+// };
 
-Imagine JavaScript scans your code twice:
 
-First pass (Memory creation): It finds all declarations (var, let, const, function) and sets them up.
+// 🧠 Why?
+// Because only the variable sayHi is hoisted (as undefined), not the function itself.
+// So when you call it, it’s like doing:
 
-Second pass (Execution): It runs the code line by line.
+// var sayHi;
+// sayHi(); // sayHi is undefined ⇒ TypeError
 
-So hoisting happens in the first pass.
+// 🪄 Summary Table
+// Type	Hoisted?	Initialized?	Can be used before declaration?
+// var	✅ Yes	✅ As undefined	⚠️ Yes, but gives undefined
+// let	✅ Yes	❌ No	❌ ReferenceError
+// const	✅ Yes	❌ No	❌ ReferenceError
+// Function Declaration	✅ Yes	✅ Full definition	✅ Yes
+// Function Expression	✅ Yes (variable only)	✅ As undefined	❌ TypeError
+// 🧩 Visual Analogy
 
-🏁 In Simple Words
+// Imagine JavaScript scans your code twice:
 
-    Hoisting means JavaScript “lifts up” all declarations (but not assignments) to the top of the scope, so you can technically use them before they appear in your code — but only safely for function declarations and var.
+// First pass (Memory creation): It finds all declarations (var, let, const, function) and sets them up.
+
+// Second pass (Execution): It runs the code line by line.
+
+// So hoisting happens in the first pass.
+
+// 🏁 In Simple Words
+
+//     Hoisting means JavaScript “lifts up” all declarations (but not assignments) to the top of the scope, so you can technically use them before they appear in your code — but only safely for function declarations and var.

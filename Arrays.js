@@ -192,3 +192,6 @@ console.log(score.sort());              //[ 67, 72, 85, 90 ]
 
 // console.log(index); // ✅ Output: 2
 
+
+//Shallow and deep copy in js
+

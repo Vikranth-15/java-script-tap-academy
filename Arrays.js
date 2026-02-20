@@ -195,3 +195,8 @@ console.log(score.sort());              //[ 67, 72, 85, 90 ]
 
 //Shallow and deep copy in js
 
+
+
+
+let arr=[1,2,3];
+let a=[...arr];

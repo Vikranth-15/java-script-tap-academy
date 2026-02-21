@@ -4,11 +4,11 @@ function displayGreeting(displayName){
     console.log("How are you?");
 }
 
-// displayGreeting(function()
+displayGreeting(function()
 
-// {
-//     console.log("Ram");
-// });
+{
+    console.log("Ram");
+});
 
 function displayVikky(){
     console.log("Vikky");
@@ -20,4 +20,5 @@ let displayRam=function(){
 
 displayGreeting(displayRam);
 
-//displayGreeting(displayVikky);
+//
+displayGreeting(displayVikky);

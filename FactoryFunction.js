@@ -36,4 +36,21 @@ console.log(val2);
 let val3=createCar1("Tata","White");
 console.log(val3);
 // ------- output 
-//{ brand: 'Tata', color: 'White', start: [Function: start] }
+// { brand: 'Tata', color: 'White', start: [Function: start] }
+
+
+// Constructor Function 
+
+
+//PascalCase
+function CreateCar(brand,color){
+        this.brand=brand,
+        this.color=color
+}
+
+
+
+let obj=new CreateCar("Ferari","Red");
+console.log(obj);       
+// output ---
+//Car { brand: 'Ferari', color: 'Red' }

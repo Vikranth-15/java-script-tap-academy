@@ -28,5 +28,12 @@ console.log(val);
 console.log(val1);
 console.log(val2);
 
+//-------- output 
+// { brand: 'Tata', color: 'White', start: [Function: start] }
+// { brand: 'BMW', color: 'blue', start: [Function: start] }
+// { brand: 'Audi', color: 'White', start: [Function: start] }
+
 let val3=createCar1("Tata","White");
 console.log(val3);
+// ------- output 
+//{ brand: 'Tata', color: 'White', start: [Function: start] }

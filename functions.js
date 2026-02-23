@@ -45,4 +45,51 @@ console.log(subb);  //output ---> 1000
 
 
 
+function add(a,b,c){
+    return a+b+c;
+}
 
+function add(...arr){
+    let sum=0;
+    for(let el of arr){
+        sum+=el;
+    }
+    console.log(sum);
+}
+
+let arr=[1,2,3,4,5,6];
+add(...arr);
+
+
+let[a7,b7,c7]=[1,2,3];
+console.log(a7);
+console.log(b7);
+console.log(c7);
+
+let[a1,...arr1]=[1,2,3,4,5];
+console.log(a1);
+console.log(arr1);
+
+
+//Default parameter 
+function sum1(a2=3, b2=8){
+    console.log(a2);
+  console.log(b2);
+}
+
+sum1(99,66);
+
+//Function Declaration
+function add(a,b){
+    return a+b;
+}
+
+console.log(add(3,4));
+
+
+//Function Expression
+let summ=function(a,b){
+    return a+b;
+}
+
+console.log(summ(7,8));
